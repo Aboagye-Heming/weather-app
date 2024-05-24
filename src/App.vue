@@ -2,7 +2,7 @@
   <div class="app">
     <div class="header container h-100 p-5">
       <h1 class="mb-5">Weather App</h1>
-      <div class="d-flex justfy-content-center h-100">
+      <div class="d-flex justify-content-center  h-100">
         <div class="search-bar w-50 mx-2">
           <input
             v-model="city"
@@ -42,7 +42,7 @@ export default (await import("vue")).defineComponent({
 
 <style>
 body {
-  background-color: #121212;
+  background-color: #121212 !important;
 }
 .header {
   background-color: #212730;
