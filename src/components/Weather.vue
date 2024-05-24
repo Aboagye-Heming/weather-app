@@ -1,6 +1,6 @@
 <template>
   <div class="container p-0">
-    <div class="d-flex">
+    <div class="d-flex mt-4">
       <div class="card main-div w-100">
         <div class="p-3">
           <h2 class="mb-1 day">Monday</h2>
@@ -10,39 +10,39 @@
             <i class="fa fa-location">Accra <small>Country</small></i>
           </h2>
           <div class="temp">
-            <h1 class="weather-temp">19&deg;</h1>
+            <h1 class="weather-temp">{{ response?.data?.main?.temp }}</h1>
             <h2 class="text-light">Description</h2>
           </div>
         </div>
       </div>
-    </div>
-    <div class="card card-2 w-100">
-      <table class="m-4">
-        <tbody>
-          <tr>
-            <th>Sea Level</th>
-            <td>100</td>
-          </tr>
-          <tr>
-            <th>Sea Level</th>
-            <td>100</td>
-          </tr>
-          <tr>
-            <th>Sea Level</th>
-            <td>100</td>
-          </tr>
-        </tbody>
-      </table>
-      <DaysWeather></DaysWeather>
+      <div class="card card-2 w-100">
+        <table class="m-4">
+          <tbody>
+            <tr>
+              <th>Sea Level</th>
+              <td>100</td>
+            </tr>
+            <tr>
+              <th>Sea Level</th>
+              <td>100</td>
+            </tr>
+            <tr>
+              <th>Sea Level</th>
+              <td>100</td>
+            </tr>
+          </tbody>
+        </table>
+        <DaysWeather></DaysWeather>
 
-      <div id="div_Form d-flex" class="d-flex m-3 justify-content-center">
-        <form action="">
-          <input
-            type="button"
-            value="Change Location"
-            class="btn change-btn btn-primary"
-          />
-        </form>
+        <div id="div_Form d-flex" class="d-flex m-3 justify-content-center">
+          <form action="">
+            <input
+              type="button"
+              value="Change Location"
+              class="btn change-btn btn-primary"
+            />
+          </form>
+        </div>
       </div>
     </div>
   </div>
@@ -50,11 +50,41 @@
 
 <script>
 import DaysWeather from "./DaysWeather.vue";
+import axios from "axios";
 export default (await import("vue")).defineComponent({
   name: "myWeather",
   components: { DaysWeather },
+  props: {
+    city: {
+      type: String,
+      required: true,
+    },
+  },
   data() {
-    return {};
+    return {
+      temperature: null,
+      description: null,
+      iconUrl: null,
+      date: null,
+      time: null,
+    };
+  },
+  async created() {
+    const response = await axios.get(
+      `api`
+    );
+    console.log(response)
+    const weatherData = response.data;
+    this.temperature = weatherData.main.temp;
+    this.description = weatherData.weather[0].description;
+    this.iconUrl = `https://api.openweathermap.org/img/w/${weatherData.weather[0].icon}.png`;
+    this.name = weatherData.name;
+    const date = new Date();
+    this.time =
+      date.getHours() + "-" + date.getMinutes() + ":" + date.getSeconds();
+
+    this.date = weatherData.main.temp;
+    this.time = weatherData.main.temp;
   },
   methods: {},
 });
@@ -72,6 +102,13 @@ body {
 h2.mb-1.day {
   font-size: 3rem;
   font-weight: 400;
+  color: #fff;
+}
+.place {
+  color: #fff;
+}
+.small {
+  color: #fff;
 }
 .main-div {
   border-radius: 20px;
@@ -82,6 +119,7 @@ h2.mb-1.day {
   /* background-blend-mode: overlay; */
   background-color: rgba(0, 0, 0, 0.5);
   background-repeat: no-repeat;
+  height: 1rem;
 }
 .temp {
   position: absolute;
@@ -93,7 +131,7 @@ h2.mb-1.day {
   z-index: 1;
 }
 .card-2 {
-  background-color: #212730;
+  background-color: #212730 !important;
   border-radius: 20px;
 }
 .card-details {

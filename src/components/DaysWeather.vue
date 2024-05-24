@@ -3,24 +3,24 @@
     <div class="loading">Loading...</div>
     <ul class="p-0">
       <li class="li_active">
-        <div class="py3">icons</div>
-        <div class="py3">days</div>
-        <div class="py3">12oc</div>
+        <div class="py-3">icons</div>
+        <div class="py-3">days</div>
+        <div class="py-3">12oc</div>
       </li>
       <li class="li_active">
-        <div class="py3">icons</div>
-        <div class="py3">days</div>
-        <div class="py3">12oc</div>
+        <div class="py-3">icons</div>
+        <div class="py-3">days</div>
+        <div class="py-3">12oc</div>
       </li>
       <li class="li_active">
-        <div class="py3">icons</div>
-        <div class="py3">days</div>
-        <div class="py3">12oc</div>
+        <div class="py-3">icons</div>
+        <div class="py-3">days</div>
+        <div class="py-3">12oc</div>
       </li>
       <li class="li_active">
-        <div class="py3">icons</div>
-        <div class="py3">days</div>
-        <div class="py3">12oc</div>
+        <div class="py-3">icons</div>
+        <div class="py-3">days</div>
+        <div class="py-3">12oc</div>
       </li>
     </ul>
   </div>
@@ -44,6 +44,7 @@ export default (await import("vue")).defineComponent({
   border-radius: 20px;
   width: 90%;
   margin: auto;
+  background-color: #343d4d;
 }
 .loading {
   color: #fff;
@@ -66,23 +67,23 @@ span {
   font: 100% sans-serif;
   height: 35px;
 }
-.li_active{
-    background: #253d5c;
-    color: #222831;
-    border-radius: 0.5rem;
-    margin: 0.5rem;
-    color: #fff;
-    font-weight: 600;
+.li_active {
+  background: #253d5c;
+  color: #222831;
+  border-radius: 0.5rem;
+  margin: 0.5rem;
+  color: #fff;
+  font-weight: 600;
 }
-.li_active:hover{
-    transform: scale(1.2);
-    transition: transform 0.1s ease;
+.li_active:hover {
+  transform: scale(1.2);
+  transition: transform 0.1s ease;
 }
-.li_active_temp{
-    display: inline-block;
-    background-color: #222831;
-    color: #fff;
-    transition: background-color 0.5s;
-    border-radius: 10px;
+.li_active_temp {
+  display: inline-block;
+  background-color: #222831;
+  color: #fff;
+  transition: background-color 0.5s;
+  border-radius: 10px;
 }
 </style>
