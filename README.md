@@ -24,46 +24,6 @@ Follow these steps to set up and run the Weather App locally:
    git clone https://github.com/yourusername/weather-app.git
    cd weather-app
 
-2. **Install Dependencies**:
-   npm install
-
-3. **Configure API Key**:
-   Create a `.env` file in the root directory and add your OpenWeatherMap API key:
-   VUE_APP_WEATHER_API_KEY=your_openweathermap_api_key
-
-4. **Run the App**:
-
-Sure, here's the entire README content in one file for easy copying and pasting:
-
-markdown
-Copy code
-
-# **Weather App**
-
-**The Weather App** is a web application built with Vue.js that enables users to retrieve current weather information and a 4-day forecast for any city worldwide. Leveraging the OpenWeatherMap API, this app provides real-time weather data with a user-friendly interface.
-
-## Features
-
-- **Search Functionality:** Users can search for weather information by entering the name of a city.
-- **Current Weather Display:** The app shows current weather details such as temperature, description, humidity, wind speed, and pressure.
-- **4-Day Forecast:** Users can view a 4-day weather forecast to plan ahead.
-- **Error Handling:** The app gracefully handles errors for invalid city names and provides feedback to users.
-
-## Prerequisites
-
-Before running the Weather App, ensure you have the following installed:
-
-- **Node.js and npm:** Required for package management.
-- **OpenWeatherMap API Key:** Obtain an API key to access weather data from the OpenWeatherMap API.
-
-## Getting Started
-
-Follow these steps to set up and run the Weather App locally:
-
-1. **Clone the Repository**:
-   git clone https://github.com/yourusername/weather-app.git
-   cd weather-app
-
 markdown
 Copy code
 
