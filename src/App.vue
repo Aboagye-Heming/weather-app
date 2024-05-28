@@ -11,17 +11,19 @@
             placeholder="Enter a city"
           />
         </div>
-        <button class="btn-search btn btn-primary" @click="searchWeather">Search</button>
+        <button class="btn-search btn btn-primary" @click="searchWeather">
+          Search
+        </button>
       </div>
     </div>
-    <Weather :city="city" v-if="showWeather"></Weather>
+    <Weather v-if="showWeather" :city="city"></Weather>
   </div>
 </template>
 
 <script>
-import Weather from "./components/Weather.vue";
+import Weather from "./components/WeatherReport.vue";
 
-export default (await import("vue")).defineComponent({
+export default {
   name: "App",
   components: { Weather },
   data() {
@@ -37,7 +39,7 @@ export default (await import("vue")).defineComponent({
       this.showWeather = true;
     },
   },
-});
+};
 </script>
 
 <style>
