@@ -15,8 +15,11 @@
           Search
         </button>
       </div>
+      <div v-if="error" class="alert alert-danger mt-3">
+        {{ error }}
+      </div>
     </div>
-    <Weather v-if="showWeather" :city="city"></Weather>
+    <Weather v-if="showWeather" :city="city" @error="handleError"></Weather>
   </div>
 </template>
 
@@ -30,13 +33,19 @@ export default {
     return {
       city: "",
       showWeather: false,
+      error: null,
     };
   },
   methods: {
     async searchWeather() {
+      this.error = null;
       this.showWeather = false;
       await this.$nextTick();
       this.showWeather = true;
+    },
+    handleError(errorMessage) {
+      this.error = errorMessage;
+      this.showWeather = false;
     },
   },
 };
@@ -56,5 +65,9 @@ body {
 }
 .btn-search {
   background-image: linear-gradient(to left, cyan, magenta);
+}
+.alert {
+  width: 50%;
+  margin: 0 auto;
 }
 </style>

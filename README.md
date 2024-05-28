@@ -21,24 +21,15 @@ Before running the Weather App, ensure you have the following installed:
 Follow these steps to set up and run the Weather App locally:
 
 1. **Clone the Repository**:
-   git clone https://github.com/yourusername/weather-app.git
+   git clone https://github.com/Aboagye-Heming/weather-app.git
    cd weather-app
-
-markdown
-Copy code
 
 2. **Install Dependencies**:
    npm install
 
-markdown
-Copy code
-
 3. **Configure API Key**:
    Create a `.env` file in the root directory and add your OpenWeatherMap API key:
    VUE_APP_WEATHER_API_KEY=your_openweathermap_api_key
-
-markdown
-Copy code
 
 4. **Run the App**:
    npm run serve

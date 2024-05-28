@@ -86,6 +86,7 @@ export default {
         this.country = weatherData.sys.country;
         this.name = weatherData.name;
       } catch (error) {
+        this.$emit("error", "City not found. Please enter a valid city.");
         console.error("Error fetching weather data:", error);
       }
     },
