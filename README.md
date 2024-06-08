@@ -51,6 +51,10 @@ Follow these steps to set up and run the Weather App locally:
 - **Bootstrap:** A front-end framework for designing responsive and mobile-first websites.
 - **OpenWeatherMap API:** Provides access to real-time weather data and forecasts.
 
+## Deployment
+
+You can access the deployed Weather App at this link.
+
 ## Acknowledgements
 
 - Weather data provided by [OpenWeatherMap](https://openweathermap.org/).
