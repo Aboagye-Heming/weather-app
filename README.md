@@ -53,7 +53,7 @@ Follow these steps to set up and run the Weather App locally:
 
 ## Deployment
 
-You can access the deployed Weather App at this link.
+You can access the deployed Weather App at https://weather-app-321real-time.netlify.app/.
 
 ## Acknowledgements
 
