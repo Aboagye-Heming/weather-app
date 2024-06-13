@@ -126,7 +126,7 @@ h2.mb-1.day {
   background-position: center;
   background-color: rgba(0, 0, 0, 0.5);
   background-repeat: no-repeat;
-  height: 100%;
+  height: 28rem;
 }
 .temp {
   position: absolute;

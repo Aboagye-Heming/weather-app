@@ -3,7 +3,7 @@
     <div v-if="loading" class="loading">Loading...</div>
     <ul v-else class="p-0">
       <li v-for="(day, index) in daysWeather" :key="index" class="li_active">
-        <div class="py-3" style="height: 28rem"><img :src="day.iconUrl" alt="Weather icon" /></div>
+        <div class="py-3"><img :src="day.iconUrl" alt="Weather icon" /></div>
         <div class="py-3">{{ day.date }}</div>
         <div class="py-3">{{ day.temperature }}&deg;C</div>
       </li>
